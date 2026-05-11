@@ -1,0 +1,21 @@
+paths:
+  maldeb_all: "../../dataset/maldeb/all"
+  malimg_train: "../../dataset/malimg/train"
+  malimg_validation: "../../dataset/malimg/validation"
+
+image:
+  input_size: 128
+
+class_alignment:
+  aliases:
+    Rbotigen: "Rbot!gen"
+
+fewshot:
+  shots: [1, 5, 10, 20]
+  repeats: 20
+  seed: 42
+  batch_size: 128
+  num_workers: 4
+
+ddpf:
+  alpha_candidates: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0]

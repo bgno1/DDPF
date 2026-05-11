@@ -1,0 +1,99 @@
+# =========================
+# Python cache / bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# =========================
+# Jupyter / notebook cache
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# OS / editor files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+.cursor/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+wandb/
+mlruns/
+tensorboard/
+runs/
+
+# =========================
+# Data files / datasets
+# =========================
+data/
+dataset/
+datasets/
+raw_data/
+processed_data/
+
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# =========================
+# Model weights / checkpoints
+# =========================
+checkpoints/*
+!checkpoints/.gitkeep
+
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# =========================
+# Experimental results
+# =========================
+results/*
+!results/.gitkeep
+
+outputs/
+artifacts/
+figures/generated/
+reports/generated/
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+.cache/
+*.tmp
+*.bak
+*.swp
