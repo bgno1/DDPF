@@ -1,6 +1,6 @@
-# DDPF：基于双域特征原型融合的小样本图像化恶意软件检测
+# 基于双域特征原型融合的小样本图像化恶意软件检测
 
-本仓库为论文《基于双域特征原型融合的小样本图像化恶意软件检测》支撑代码。
+本仓库代码支撑论文《基于双域特征原型融合的小样本图像化恶意软件检测》研究结论。
 
 ## 数据路径
 
@@ -12,11 +12,11 @@
 ../../dataset/malimg/validation
 ```
 
-Maldeb 的 `Benign` / `Malicious` 目录在自监督训练中只作为无标签图像池读取，不使用类别标签。Malimg validation 中的 `Rbotigen` 会在代码层映射为 train 中的 `Rbot!gen`，不修改原始数据。
+**注意**：Maldeb 的 `Benign` / `Malicious` 目录在自监督训练中只作为无标签图像池读取，不使用类别标签。Malimg validation 中的 `Rbotigen` 会在代码层映射为 train 中的 `Rbot!gen`，不修改原始数据。
 
 ## 环境
 
-建议在已有 PyTorch CUDA 环境中安装以下依赖：
+建议在 PyTorch CUDA 环境中安装以下依赖：
 
 ```bash
 pip install -r requirements.txt
@@ -71,8 +71,3 @@ python scripts/summarize_results.py \
   --input results/fewshot_results.csv \
   --output results/summary.csv
 ```
-
-
-## 说明
-
-`DDPF-Oracle` 只用于诊断固定融合权重的潜力；论文最终方法是 `DDPF-Adp`，其 `alpha` 选择严格依赖 support set，不访问 query label。
